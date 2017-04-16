@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022ED70B1EA1C9F1007A0A38 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022ED7081EA1C9B2007A0A38 /* Eureka.framework */; };
+		022ED70C1EA1C9F1007A0A38 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022ED7081EA1C9B2007A0A38 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022ED7101EA1CA14007A0A38 /* OrderFormController.swift */; };
+		025843941E9F67B600116D7D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025843931E9F67B600116D7D /* MainController.swift */; };
 		027469B51E9B4EE200D9A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469B41E9B4EE200D9A453 /* AppDelegate.swift */; };
 		027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469B61E9B4EE200D9A453 /* ViewController.swift */; };
 		027469BA1E9B4EE200D9A453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027469B81E9B4EE200D9A453 /* Main.storyboard */; };
@@ -14,9 +18,31 @@
 		027469BF1E9B4EE200D9A453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027469BD1E9B4EE200D9A453 /* LaunchScreen.storyboard */; };
 		027469CA1E9B4EE200D9A453 /* FoodieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469C91E9B4EE200D9A453 /* FoodieAppTests.swift */; };
 		027469D51E9B4EE200D9A453 /* FoodieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */; };
+		027469E31E9B4F2A00D9A453 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469E21E9B4F2A00D9A453 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		022ED7071EA1C9B2007A0A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DEB1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
+		022ED7091EA1C9B2007A0A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DF51B9A4F5E004A00EB;
+			remoteInfo = EurekaTests;
+		};
+		022ED70D1EA1C9F1007A0A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 51729DEA1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
 		027469C61E9B4EE200D9A453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 027469A91E9B4EE200D9A453 /* Project object */;
@@ -33,7 +59,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		022ED70F1EA1C9F2007A0A38 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				022ED70C1EA1C9F1007A0A38 /* Eureka.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = FoodieApp/Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
+		022ED7101EA1CA14007A0A38 /* OrderFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFormController.swift; sourceTree = "<group>"; };
+		025843931E9F67B600116D7D /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		027469B11E9B4EE200D9A453 /* FoodieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027469B41E9B4EE200D9A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027469B61E9B4EE200D9A453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +90,7 @@
 		027469D01E9B4EE200D9A453 /* FoodieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieAppUITests.swift; sourceTree = "<group>"; };
 		027469D61E9B4EE200D9A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027469E21E9B4F2A00D9A453 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022ED70B1EA1C9F1007A0A38 /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022ED7031EA1C9B2007A0A38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				022ED7081EA1C9B2007A0A38 /* Eureka.framework */,
+				022ED70A1EA1C9B2007A0A38 /* EurekaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		027469A81E9B4EE200D9A453 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +135,7 @@
 				027469C81E9B4EE200D9A453 /* FoodieAppTests */,
 				027469D31E9B4EE200D9A453 /* FoodieAppUITests */,
 				027469B21E9B4EE200D9A453 /* Products */,
+				022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +158,9 @@
 				027469BB1E9B4EE200D9A453 /* Assets.xcassets */,
 				027469BD1E9B4EE200D9A453 /* LaunchScreen.storyboard */,
 				027469C01E9B4EE200D9A453 /* Info.plist */,
+				027469E21E9B4F2A00D9A453 /* WebViewController.swift */,
+				025843931E9F67B600116D7D /* MainController.swift */,
+				022ED7101EA1CA14007A0A38 /* OrderFormController.swift */,
 			);
 			path = FoodieApp;
 			sourceTree = "<group>";
@@ -135,10 +193,12 @@
 				027469AD1E9B4EE200D9A453 /* Sources */,
 				027469AE1E9B4EE200D9A453 /* Frameworks */,
 				027469AF1E9B4EE200D9A453 /* Resources */,
+				022ED70F1EA1C9F2007A0A38 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				022ED70E1EA1C9F1007A0A38 /* PBXTargetDependency */,
 			);
 			name = FoodieApp;
 			productName = FoodieApp;
@@ -193,6 +253,7 @@
 				TargetAttributes = {
 					027469B01E9B4EE200D9A453 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = UPN4Z357LT;
 						ProvisioningStyle = Automatic;
 					};
 					027469C41E9B4EE200D9A453 = {
@@ -218,6 +279,12 @@
 			mainGroup = 027469A81E9B4EE200D9A453;
 			productRefGroup = 027469B21E9B4EE200D9A453 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 022ED7031EA1C9B2007A0A38 /* Products */;
+					ProjectRef = 022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				027469B01E9B4EE200D9A453 /* FoodieApp */,
@@ -226,6 +293,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		022ED7081EA1C9B2007A0A38 /* Eureka.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Eureka.framework;
+			remoteRef = 022ED7071EA1C9B2007A0A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		022ED70A1EA1C9B2007A0A38 /* EurekaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EurekaTests.xctest;
+			remoteRef = 022ED7091EA1C9B2007A0A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		027469AF1E9B4EE200D9A453 /* Resources */ = {
@@ -259,7 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025843941E9F67B600116D7D /* MainController.swift in Sources */,
 				027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */,
+				022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */,
+				027469E31E9B4F2A00D9A453 /* WebViewController.swift in Sources */,
 				027469B51E9B4EE200D9A453 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +370,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		022ED70E1EA1C9F1007A0A38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			targetProxy = 022ED70D1EA1C9F1007A0A38 /* PBXContainerItemProxy */;
+		};
 		027469C71E9B4EE200D9A453 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 027469B01E9B4EE200D9A453 /* FoodieApp */;
@@ -413,7 +505,9 @@
 		027469DA1E9B4EE200D9A453 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UPN4Z357LT;
 				INFOPLIST_FILE = FoodieApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snorri.FoodieApp;
@@ -425,7 +519,9 @@
 		027469DB1E9B4EE200D9A453 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UPN4Z357LT;
 				INFOPLIST_FILE = FoodieApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snorri.FoodieApp;
@@ -507,6 +603,7 @@
 				027469DB1E9B4EE200D9A453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		027469DC1E9B4EE200D9A453 /* Build configuration list for PBXNativeTarget "FoodieAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +612,7 @@
 				027469DE1E9B4EE200D9A453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		027469DF1E9B4EE200D9A453 /* Build configuration list for PBXNativeTarget "FoodieAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +621,7 @@
 				027469E11E9B4EE200D9A453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
