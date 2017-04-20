@@ -151,7 +151,7 @@ class OrderFormController: FormViewController {
     func postForm() {
         
         // setup the request
-        var request = URLRequest(url: URL(string: "http://localhost:5000/api/order")!)
+        var request = URLRequest(url: URL(string: "http://www.yalefoodiecall.com/api/order")!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")

@@ -19,6 +19,7 @@
 		027469BF1E9B4EE200D9A453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027469BD1E9B4EE200D9A453 /* LaunchScreen.storyboard */; };
 		027469CA1E9B4EE200D9A453 /* FoodieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469C91E9B4EE200D9A453 /* FoodieAppTests.swift */; };
 		027469D51E9B4EE200D9A453 /* FoodieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */; };
+		02CED14F1EA8836F00354C07 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CED14E1EA8836F00354C07 /* LoadingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		027469D01E9B4EE200D9A453 /* FoodieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieAppUITests.swift; sourceTree = "<group>"; };
 		027469D61E9B4EE200D9A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02CED14E1EA8836F00354C07 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				027469C01E9B4EE200D9A453 /* Info.plist */,
 				022ED7101EA1CA14007A0A38 /* OrderFormController.swift */,
 				021760D41EA838080075C973 /* ThanksController.swift */,
+				02CED14E1EA8836F00354C07 /* LoadingController.swift */,
 			);
 			path = FoodieApp;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */,
 				022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */,
 				027469B51E9B4EE200D9A453 /* AppDelegate.swift in Sources */,
+				02CED14F1EA8836F00354C07 /* LoadingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

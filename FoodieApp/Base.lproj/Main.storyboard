@@ -108,7 +108,7 @@ Running Thursday nights from 11 pm - 1 am. Accepting preorders now.</string>
                             <constraint firstItem="i3g-eL-dxD" firstAttribute="height" secondItem="MO2-nL-rb1" secondAttribute="height" multiplier="1:10" id="J3R-SM-3mx"/>
                             <constraint firstItem="sTl-Pw-1RT" firstAttribute="centerX" secondItem="gaw-rh-0hd" secondAttribute="centerX" id="J5n-AB-dzJ"/>
                             <constraint firstItem="NFn-62-CFN" firstAttribute="top" secondItem="UFC-ep-Kbb" secondAttribute="bottom" constant="16" id="Pjv-S7-6uT"/>
-                            <constraint firstItem="NFn-62-CFN" firstAttribute="width" secondItem="MO2-nL-rb1" secondAttribute="width" multiplier="1:3" id="WZH-pN-rrb"/>
+                            <constraint firstItem="NFn-62-CFN" firstAttribute="width" secondItem="MO2-nL-rb1" secondAttribute="width" multiplier="2:5" id="WZH-pN-rrb"/>
                             <constraint firstItem="UFC-ep-Kbb" firstAttribute="width" secondItem="MO2-nL-rb1" secondAttribute="width" multiplier="9:10" id="XXZ-tY-dgA"/>
                             <constraint firstItem="sTl-Pw-1RT" firstAttribute="height" secondItem="BcZ-mh-RoC" secondAttribute="height" id="dnN-Nr-Uoo"/>
                             <constraint firstItem="gaw-rh-0hd" firstAttribute="width" secondItem="MO2-nL-rb1" secondAttribute="width" id="fVh-jH-f2w"/>
@@ -148,10 +148,10 @@ Running Thursday nights from 11 pm - 1 am. Accepting preorders now.</string>
             </objects>
             <point key="canvasLocation" x="52" y="-14"/>
         </scene>
-        <!--View Controller-->
+        <!--Loading Controller-->
         <scene sceneID="VWu-AO-cBK">
             <objects>
-                <viewController restorationIdentifier="loadingController" storyboardIdentifier="loadingController" id="SKw-xW-vd6" sceneMemberID="viewController">
+                <viewController restorationIdentifier="loadingController" storyboardIdentifier="loadingController" id="SKw-xW-vd6" customClass="LoadingController" customModule="FoodieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpa-Qz-A1w"/>
                         <viewControllerLayoutGuide type="bottom" id="sSd-A0-TZv"/>
@@ -174,6 +174,9 @@ Running Thursday nights from 11 pm - 1 am. Accepting preorders now.</string>
                             <constraint firstItem="GxI-Kx-pgw" firstAttribute="width" secondItem="eQd-sT-LUk" secondAttribute="width" multiplier="1:4" id="eP9-Qu-Yp7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="GxI-Kx-pgw" id="jl7-eg-iSE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ey-VY-JxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,7 +232,7 @@ We’re on the way ;)</string>
                         <constraints>
                             <constraint firstItem="fYd-DD-7Ea" firstAttribute="centerX" secondItem="ZQd-pZ-Lou" secondAttribute="centerX" id="4VA-er-2iv"/>
                             <constraint firstItem="JUt-Ha-BzJ" firstAttribute="width" secondItem="ZQd-pZ-Lou" secondAttribute="width" multiplier="4:5" id="7Yd-Xu-eAk"/>
-                            <constraint firstItem="CtC-VH-nkY" firstAttribute="width" secondItem="ZQd-pZ-Lou" secondAttribute="width" multiplier="1:5" id="9Jo-ms-vHT"/>
+                            <constraint firstItem="CtC-VH-nkY" firstAttribute="width" secondItem="ZQd-pZ-Lou" secondAttribute="width" multiplier="1:4" id="9Jo-ms-vHT"/>
                             <constraint firstItem="fYd-DD-7Ea" firstAttribute="height" secondItem="0dp-vM-TOi" secondAttribute="height" id="Cv8-3r-p1Z"/>
                             <constraint firstItem="CtC-VH-nkY" firstAttribute="centerX" secondItem="ZQd-pZ-Lou" secondAttribute="centerX" id="FcI-yq-1Rq"/>
                             <constraint firstItem="0dp-vM-TOi" firstAttribute="height" secondItem="ZQd-pZ-Lou" secondAttribute="height" multiplier="1:20" id="Hcw-lO-dfu"/>
