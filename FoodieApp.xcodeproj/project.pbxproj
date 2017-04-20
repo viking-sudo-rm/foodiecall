@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021760D31EA82E9C0075C973 /* Cabin in Resources */ = {isa = PBXBuildFile; fileRef = 021760D21EA82E9C0075C973 /* Cabin */; };
+		021760D51EA838080075C973 /* ThanksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021760D41EA838080075C973 /* ThanksController.swift */; };
 		022ED70B1EA1C9F1007A0A38 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022ED7081EA1C9B2007A0A38 /* Eureka.framework */; };
 		022ED70C1EA1C9F1007A0A38 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 022ED7081EA1C9B2007A0A38 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022ED7101EA1CA14007A0A38 /* OrderFormController.swift */; };
-		025843941E9F67B600116D7D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025843931E9F67B600116D7D /* MainController.swift */; };
 		027469B51E9B4EE200D9A453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469B41E9B4EE200D9A453 /* AppDelegate.swift */; };
 		027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469B61E9B4EE200D9A453 /* ViewController.swift */; };
 		027469BA1E9B4EE200D9A453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027469B81E9B4EE200D9A453 /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		027469BF1E9B4EE200D9A453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027469BD1E9B4EE200D9A453 /* LaunchScreen.storyboard */; };
 		027469CA1E9B4EE200D9A453 /* FoodieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469C91E9B4EE200D9A453 /* FoodieAppTests.swift */; };
 		027469D51E9B4EE200D9A453 /* FoodieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */; };
-		027469E31E9B4F2A00D9A453 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469E21E9B4F2A00D9A453 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		021760D21EA82E9C0075C973 /* Cabin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cabin; sourceTree = "<group>"; };
+		021760D41EA838080075C973 /* ThanksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksController.swift; sourceTree = "<group>"; };
 		022ED7021EA1C9B2007A0A38 /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = FoodieApp/Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
 		022ED7101EA1CA14007A0A38 /* OrderFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFormController.swift; sourceTree = "<group>"; };
-		025843931E9F67B600116D7D /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		027469B11E9B4EE200D9A453 /* FoodieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027469B41E9B4EE200D9A453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027469B61E9B4EE200D9A453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +91,6 @@
 		027469D01E9B4EE200D9A453 /* FoodieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieAppUITests.swift; sourceTree = "<group>"; };
 		027469D61E9B4EE200D9A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		027469E21E9B4F2A00D9A453 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,15 +152,15 @@
 		027469B31E9B4EE200D9A453 /* FoodieApp */ = {
 			isa = PBXGroup;
 			children = (
+				021760D21EA82E9C0075C973 /* Cabin */,
 				027469B41E9B4EE200D9A453 /* AppDelegate.swift */,
 				027469B61E9B4EE200D9A453 /* ViewController.swift */,
 				027469B81E9B4EE200D9A453 /* Main.storyboard */,
 				027469BB1E9B4EE200D9A453 /* Assets.xcassets */,
 				027469BD1E9B4EE200D9A453 /* LaunchScreen.storyboard */,
 				027469C01E9B4EE200D9A453 /* Info.plist */,
-				027469E21E9B4F2A00D9A453 /* WebViewController.swift */,
-				025843931E9F67B600116D7D /* MainController.swift */,
 				022ED7101EA1CA14007A0A38 /* OrderFormController.swift */,
+				021760D41EA838080075C973 /* ThanksController.swift */,
 			);
 			path = FoodieApp;
 			sourceTree = "<group>";
@@ -318,6 +318,7 @@
 			files = (
 				027469BF1E9B4EE200D9A453 /* LaunchScreen.storyboard in Resources */,
 				027469BC1E9B4EE200D9A453 /* Assets.xcassets in Resources */,
+				021760D31EA82E9C0075C973 /* Cabin in Resources */,
 				027469BA1E9B4EE200D9A453 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,10 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025843941E9F67B600116D7D /* MainController.swift in Sources */,
+				021760D51EA838080075C973 /* ThanksController.swift in Sources */,
 				027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */,
 				022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */,
-				027469E31E9B4F2A00D9A453 /* WebViewController.swift in Sources */,
 				027469B51E9B4EE200D9A453 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
