@@ -55,6 +55,7 @@ class OrderFormController: FormViewController {
                             self.buildings.append(building["display"]! as! String)
                             self.clusters[building["display"]! as! String] = building["cluster"]! as? NSNumber
                         }
+                        self.buildings.append("Other")
                         
                         let pickerRow = self.form.rowBy(tag: "building") as! PickerInlineRow<String>
                         pickerRow.updateCell()
@@ -88,9 +89,11 @@ class OrderFormController: FormViewController {
                             self.restaurants[food["name"] as! String] = food["restaurant"] as? String
                             
                             orderSection <<< StepperRow(food["name"] as? String) {
-                                $0.title = (food["name"] as! String) + " (" + self.priceFormatter.string(from: food["price"] as! NSNumber)! + ")"
+                                $0.title = (food["name"] as! String) + "\n" + (food["restaurant"] as! String) + "\n" + self.priceFormatter.string(from: food["price"] as! NSNumber)!
                                 $0.baseValue = 0
                                 $0.displayValueFor = self.displayInt(d:)
+                                $0.cell.textLabel?.numberOfLines = 0 // multiple lines
+                                $0.cell.height = ({return 100})
                                 }.onChange { row in // value is correctly set
                                     self.quantities[row.tag!] = row.value! as NSNumber
                                     self.recalcSubtotal()
@@ -160,7 +163,7 @@ class OrderFormController: FormViewController {
         self.navigationController?.pushViewController(loadingController!, animated: true)
         print("pushed loadingController")
         
-        let formData = self.form.values()
+        var formData = self.form.values()
         do {
             
             // put quantities in the correct format
@@ -168,15 +171,25 @@ class OrderFormController: FormViewController {
                 ["food":key, "quantity":value, "restaurant":self.restaurants[key] ?? "None"] as NSDictionary
             })
             
+            var cluster : NSNumber
+            if formData["building"] as! String == "Other" { // change value of building field to manual entry
+                formData["building"] = formData["other"]
+                cluster = 3 //assign to the unknown cluster
+            } else {
+                cluster = self.clusters[formData["building"] as! String!]!
+            }
+            
             let parameters = ["source": "mobileApp",
                               "name": formData["name"]!!,
                               "email": formData["email"] as! String,
                               "phone": formData["phone"]!!,
                               "building": formData["building"]!!,
-                              "cluster": self.clusters[formData["building"] as! String]!,
+                              "cluster": cluster,
                               "entryway": formData["entryway"] as! String,
                               "total": formData["total"] as! NSNumber!,
                               "order": quantities as NSArray] as NSDictionary
+            
+            print(parameters)
             
             request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
             
@@ -331,7 +344,7 @@ class OrderFormController: FormViewController {
             .onRowValidationChanged { row in
                 self.changeValidationEvent()
             }
-            <<< PickerInlineRow<String>("building"){
+            <<< PickerInlineRow<String>("building") {
                 $0.title = "Building"
                 $0.options = []
                 $0.add(rule: RuleRequired())
@@ -339,10 +352,23 @@ class OrderFormController: FormViewController {
             }.cellUpdate { cell, row in
                 row.options = self.buildings
             }
+            .onChange { cell in
+                let otherRow = self.form.rowBy(tag: "other") as! TextRow
+                otherRow.evaluateHidden()
+                //otherRow.updateCell()
+            }
             .onRowValidationChanged { row in
                 self.changeValidationEvent()
             }
-            <<< TextRow("entryway"){
+            <<< TextRow("other") {
+                $0.title = "Other"
+                $0.hidden = Condition.function([], {_ in 
+                    let buildingRow = self.form.rowBy(tag: "building") as! PickerInlineRow<String>
+                    return buildingRow.value != "Other"
+                    //TODO decide how to do validation on this cell
+                })
+            }
+            <<< TextRow("entryway") {
                 $0.title = "Entryway"
                 $0.placeholder = "Entryway"
                 $0.add(rule: RuleRequired())
