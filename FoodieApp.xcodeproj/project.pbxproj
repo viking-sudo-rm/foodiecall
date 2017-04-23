@@ -20,6 +20,7 @@
 		027469CA1E9B4EE200D9A453 /* FoodieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469C91E9B4EE200D9A453 /* FoodieAppTests.swift */; };
 		027469D51E9B4EE200D9A453 /* FoodieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */; };
 		02CED14F1EA8836F00354C07 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CED14E1EA8836F00354C07 /* LoadingController.swift */; };
+		02DB03421EAC3EC7001DEC9A /* TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB03411EAC3EC7001DEC9A /* TitleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		027469D41E9B4EE200D9A453 /* FoodieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieAppUITests.swift; sourceTree = "<group>"; };
 		027469D61E9B4EE200D9A453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CED14E1EA8836F00354C07 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		02DB03411EAC3EC7001DEC9A /* TitleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				022ED7101EA1CA14007A0A38 /* OrderFormController.swift */,
 				021760D41EA838080075C973 /* ThanksController.swift */,
 				02CED14E1EA8836F00354C07 /* LoadingController.swift */,
+				02DB03411EAC3EC7001DEC9A /* TitleController.swift */,
 			);
 			path = FoodieApp;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DB03421EAC3EC7001DEC9A /* TitleController.swift in Sources */,
 				021760D51EA838080075C973 /* ThanksController.swift in Sources */,
 				027469B71E9B4EE200D9A453 /* ViewController.swift in Sources */,
 				022ED7111EA1CA14007A0A38 /* OrderFormController.swift in Sources */,

@@ -33,6 +33,7 @@ class OrderFormController: FormViewController {
     
     func initialize() {
         priceFormatter.numberStyle = .currency
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     // read the data we need from the server and add it to the form
@@ -82,7 +83,7 @@ class OrderFormController: FormViewController {
                         
                         let menu = try JSONSerialization.jsonObject(with: data!, options: []) as! [[String:Any]]
                         
-                        let orderSection = Section("order")
+                        let orderSection = Section("orderTotals")
                         for food in menu {
                             
                             self.prices[food["name"] as! String] = food["price"] as? NSNumber
@@ -124,7 +125,7 @@ class OrderFormController: FormViewController {
                                 $0.displayValueFor = self.priceFormatter.string
                         }
                         <<< ButtonRow("submit") {
-                            $0.title = "Order"
+                            $0.title = "Your order"
                             $0.disabled = Condition.function([], { (form) -> Bool in
                                 return !self.formValid
                             })
@@ -231,6 +232,22 @@ class OrderFormController: FormViewController {
     
     // don't call this directly
     func checkFormValid() {
+        
+//        print("revalidated")
+        
+        var checkRows = self.CHECK_ROWS_NON_NIL
+        
+        let buildingRow = self.form.rowBy(tag: "building") as? PickerInlineRow<String>
+        if buildingRow?.value == "Other" {
+            let otherRow = self.form.rowBy(tag: "other") as! TextRow
+            if otherRow.value == nil || !otherRow.isValid {
+                self.formValid = false
+                return
+            }
+        }
+        
+        checkRows.append("hello world")
+        
         self.formValid = true
         for rowName in self.CHECK_ROWS_NON_NIL {
             let row = self.form.rowBy(tag: rowName)
@@ -301,7 +318,9 @@ class OrderFormController: FormViewController {
         super.viewDidLoad()
         initialize()
         
-        form +++ Section("Contact Info")
+        form +++ Section("Contact Info") {
+                $0.tag = "contactInfo"
+            }
             <<< TextRow("name"){ row in
                 row.title = "Name"
                 row.placeholder = "Name"
@@ -351,22 +370,42 @@ class OrderFormController: FormViewController {
                 $0.validationOptions = .validatesOnChange
             }.cellUpdate { cell, row in
                 row.options = self.buildings
+                if !row.isValid {
+                    cell.textLabel?.textColor = .red
+                }
             }
             .onChange { cell in
                 let otherRow = self.form.rowBy(tag: "other") as! TextRow
                 otherRow.evaluateHidden()
-                //otherRow.updateCell()
+                self.changeValidationEvent()
             }
             .onRowValidationChanged { row in
                 self.changeValidationEvent()
             }
             <<< TextRow("other") {
                 $0.title = "Other"
-                $0.hidden = Condition.function([], {_ in 
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnBlur
+                $0.hidden = Condition.function([], {row in
                     let buildingRow = self.form.rowBy(tag: "building") as! PickerInlineRow<String>
+//                    row.validate(includeHidden: true)
+//                    self.form.sectionBy(tag: "contactInfo")?.reload()
                     return buildingRow.value != "Other"
                     //TODO decide how to do validation on this cell
                 })
+            }
+            .cellUpdate { cell, row in
+                if !row.isValid {
+                    cell.titleLabel?.textColor = .red
+                }
+            }
+            .onRowValidationChanged { row in
+//                print("updating other row")
+                self.changeValidationEvent()
+            }
+            .onChange { row in
+//                print("updating other row")
+                self.changeValidationEvent()
             }
             <<< TextRow("entryway") {
                 $0.title = "Entryway"
