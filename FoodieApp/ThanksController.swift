@@ -28,7 +28,12 @@ class ThanksController : UIViewController {
     
     func webLink(urlString: String) {
         if let url = URL(string: urlString) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            //TODO figure out what the fuck is going on here
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }
     }
     

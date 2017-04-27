@@ -125,7 +125,7 @@ class OrderFormController: FormViewController {
                                 $0.displayValueFor = self.priceFormatter.string
                         }
                         <<< ButtonRow("submit") {
-                            $0.title = "Your order"
+                            $0.title = "Submit order"
                             $0.disabled = Condition.function([], { (form) -> Bool in
                                 return !self.formValid
                             })
