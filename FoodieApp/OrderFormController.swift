@@ -246,8 +246,6 @@ class OrderFormController: FormViewController {
             }
         }
         
-        checkRows.append("hello world")
-        
         self.formValid = true
         for rowName in self.CHECK_ROWS_NON_NIL {
             let row = self.form.rowBy(tag: rowName)
@@ -296,12 +294,15 @@ class OrderFormController: FormViewController {
     }
     
     func recalcSavings() {
+        
         var totalOrders : Double = 0
         for food in self.quantities.keys {
             totalOrders += self.quantities[food] as! Double
         }
         let savingsRow = self.form.rowBy(tag: "savings") as! DecimalRow
-        savingsRow.value = totalOrders > 1 ? totalOrders - 1 : 0
+        
+//        savingsRow.value = totalOrders > 1 ? totalOrders - 1 : 0
+        savingsRow.value = totalOrders > 1 ? 1 : 0
         savingsRow.updateCell()
     }
     
